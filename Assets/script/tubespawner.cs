@@ -33,6 +33,7 @@ public class tubespawner : MonoBehaviour
                 spawnPos = previousPosition + distanceBetweenTubes * new Vector3(0,0,1);
                 Instantiate(tube, spawnPos, Quaternion.Euler(0, 0, 0));
                 previousPosition = spawnPos;
+                
             }
         }
     }
