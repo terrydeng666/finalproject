@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class backtomenu : MonoBehaviour, IPointerClickHandler
 {
-    public int sceneindex = 0;
     public void OnPointerClick(PointerEventData e)
     {
         Scene scene = SceneManager.GetActiveScene();
@@ -14,4 +13,6 @@ public class backtomenu : MonoBehaviour, IPointerClickHandler
 
         SceneManager.LoadScene(0);
     }
+
+    
 }

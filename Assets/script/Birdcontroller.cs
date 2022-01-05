@@ -19,6 +19,7 @@ public class Birdcontroller : MonoBehaviour
     public float flySpeed;
     //public TextMeshProUGUI back;
     public Button back;
+    public Button restart;
     int time=0;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class Birdcontroller : MonoBehaviour
         gameover.enabled = false;
         //ck.interactable = false;
         back.gameObject.SetActive(false);
+        restart.gameObject.SetActive(false);
         controller = GetComponent<CharacterController>();
         GameObject cube = controller.transform.GetChild(0).gameObject;
         msRender = cube.GetComponent<MeshRenderer>();
@@ -51,6 +53,7 @@ public class Birdcontroller : MonoBehaviour
             gameover.enabled = true;
             //  back.interactable = true;
             back.gameObject.SetActive(true);
+            restart.gameObject.SetActive(true);
             return;
         }
         if (alive)
@@ -79,6 +82,7 @@ public class Birdcontroller : MonoBehaviour
             alive = false;
             gameover.enabled = true;
             back.gameObject.SetActive(true);
+            restart.gameObject.SetActive(true);
         }
     }
 

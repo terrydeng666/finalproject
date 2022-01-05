@@ -64,6 +64,7 @@
     <Compile Include="Assets\script\addpoint.cs" />
     <Compile Include="Assets\script\add_tube.cs" />
     <Compile Include="Assets\script\Birdcontroller.cs" />
+    <Compile Include="Assets\script\restart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
