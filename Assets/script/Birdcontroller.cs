@@ -34,9 +34,9 @@ public class Birdcontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(time <300)
+        if(time < 200)
         {
-            if(time%90==0)
+            if(time % 90 == 0)
             {
                 playerVelocity.y += flySpeed;
             }
