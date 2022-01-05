@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Birdcontroller : MonoBehaviour
 {
@@ -16,10 +17,15 @@ public class Birdcontroller : MonoBehaviour
     private MeshRenderer msRender;
     public float speed;
     public float flySpeed;
+    //public TextMeshProUGUI back;
+    public Button back;
+    int time=0;
     // Start is called before the first frame update
     void Start()
     {
         gameover.enabled = false;
+        //ck.interactable = false;
+        back.gameObject.SetActive(false);
         controller = GetComponent<CharacterController>();
         GameObject cube = controller.transform.GetChild(0).gameObject;
         msRender = cube.GetComponent<MeshRenderer>();
@@ -28,9 +34,23 @@ public class Birdcontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(time <300)
+        {
+            if(time%90==0)
+            {
+                playerVelocity.y += flySpeed;
+            }
+            playerVelocity.y += Physics.gravity.y * Time.deltaTime;//v=v0+gt
+            controller.Move(playerVelocity * Time.deltaTime);//s=v*t
+            controller.Move(transform.forward * speed * Time.deltaTime);
+            time++;
+            return;
+        }
         if (transform.position.y >= 85.0f || transform.position.y <= 0) {
             alive = false;
             gameover.enabled = true;
+            //  back.interactable = true;
+            back.gameObject.SetActive(true);
             return;
         }
         if (alive)
@@ -58,6 +78,7 @@ public class Birdcontroller : MonoBehaviour
         {
             alive = false;
             gameover.enabled = true;
+            back.gameObject.SetActive(true);
         }
     }
 
