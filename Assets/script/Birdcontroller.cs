@@ -6,9 +6,14 @@ using UnityEngine.UI;
 public class Birdcontroller : MonoBehaviour
 {
     public Text gameover;
-    public bool alive=true;
+    public Material glowMaterial;
+    public Material normalMaterial;
+    public bool alive = true;
     private CharacterController controller;
     private Vector3 playerVelocity = Vector3.zero;
+    private int aliveTime = 3;
+    private bool invincible = false;
+    private MeshRenderer msRender;
     public float speed;
     public float flySpeed;
     // Start is called before the first frame update
@@ -16,11 +21,18 @@ public class Birdcontroller : MonoBehaviour
     {
         gameover.enabled = false;
         controller = GetComponent<CharacterController>();
+        GameObject cube = controller.transform.GetChild(0).gameObject;
+        msRender = cube.GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y >= 85.0f || transform.position.y <= 0) {
+            alive = false;
+            gameover.enabled = true;
+            return;
+        }
         if (alive)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -38,15 +50,32 @@ public class Birdcontroller : MonoBehaviour
     }
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        Debug.Log(hit.gameObject.name);
+        if (invincible) {
+            return;
+        }
+        // Debug.Log(hit.gameObject.name);
         if (hit.gameObject.tag == "tube")
         {
             alive = false;
-        }
-        if(hit.gameObject.name == "Plane")
-        {
-            alive = false;
             gameover.enabled = true;
+        }
+    }
+
+    public void noOneCanBeat() {
+        msRender.material = glowMaterial;
+        invincible = true;
+        InvokeRepeating("timer", 1, 1);
+    }
+
+    private void timer() {
+        Debug.Log("countdown");
+        alive = true;
+        aliveTime--;
+        if (aliveTime == 0) {
+            CancelInvoke("timer");
+            msRender.material = normalMaterial;
+            invincible = false;
+            aliveTime = 3;
         }
     }
 }
