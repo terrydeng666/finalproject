@@ -65,6 +65,9 @@
     <Compile Include="Assets\script\add_tube.cs" />
     <Compile Include="Assets\script\Birdcontroller.cs" />
     <Compile Include="Assets\script\restart.cs" />
+    <Compile Include="Assets\script\howToPlay.cs" />
+    <Compile Include="Assets\script\switchToHowToPlay.cs" />
+    <Compile Include="Assets\script\storyToMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

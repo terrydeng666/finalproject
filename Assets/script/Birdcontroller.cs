@@ -7,6 +7,10 @@ using TMPro;
 public class Birdcontroller : MonoBehaviour
 {
     public Text gameover;
+    public AudioSource flySound;
+    public AudioClip impact;
+    public AudioSource eatSound;
+    public AudioClip eatImpact;
     public Material glowMaterial;
     public Material normalMaterial;
     public bool alive = true;
@@ -31,6 +35,7 @@ public class Birdcontroller : MonoBehaviour
         controller = GetComponent<CharacterController>();
         GameObject cube = controller.transform.GetChild(0).gameObject;
         msRender = cube.GetComponent<MeshRenderer>();
+        flySound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,7 +53,7 @@ public class Birdcontroller : MonoBehaviour
             time++;
             return;
         }
-        if (transform.position.y >= 85.0f || transform.position.y <= 0) {
+        if (transform.position.y >= 95.0f || transform.position.y <= 0) {
             alive = false;
             gameover.enabled = true;
             //  back.interactable = true;
@@ -60,6 +65,7 @@ public class Birdcontroller : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                flySound.PlayOneShot(impact);
                 playerVelocity.y += flySpeed;
             }
             playerVelocity.y += Physics.gravity.y * Time.deltaTime;//v=v0+gt
@@ -87,6 +93,7 @@ public class Birdcontroller : MonoBehaviour
     }
 
     public void noOneCanBeat() {
+        eatSound.PlayOneShot(eatImpact);
         msRender.material = glowMaterial;
         invincible = true;
         InvokeRepeating("timer", 1, 1);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class chickenLeg : MonoBehaviour{
 
     public float turnSpeed = -90f;
+    
 
     // Start is called before the first frame update
     void Start(){
