@@ -24,7 +24,7 @@ public class tube : MonoBehaviour
 
     void spawnCoins() {
         int r = rnd.Next();
-        if (r % 10 <= 1) {
+        if (r % 9 > 0) {
             return;
         }
         int coinsToSpawn = 1;

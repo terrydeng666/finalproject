@@ -7,6 +7,10 @@ using TMPro;
 public class Birdcontroller : MonoBehaviour
 {
     public Text gameover;
+    public AudioSource flySound;
+    public AudioClip impact;
+    public AudioSource eatSound;
+    public AudioClip eatImpact;
     public Material glowMaterial;
     public Material normalMaterial;
     public bool alive = true;
@@ -19,6 +23,7 @@ public class Birdcontroller : MonoBehaviour
     public float flySpeed;
     //public TextMeshProUGUI back;
     public Button back;
+    public Button restart;
     int time=0;
     // Start is called before the first frame update
     void Start()
@@ -26,17 +31,19 @@ public class Birdcontroller : MonoBehaviour
         gameover.enabled = false;
         //ck.interactable = false;
         back.gameObject.SetActive(false);
+        restart.gameObject.SetActive(false);
         controller = GetComponent<CharacterController>();
         GameObject cube = controller.transform.GetChild(0).gameObject;
         msRender = cube.GetComponent<MeshRenderer>();
+        flySound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(time <300)
+        if(time < 200)
         {
-            if(time%90==0)
+            if(time % 90 == 0)
             {
                 playerVelocity.y += flySpeed;
             }
@@ -46,17 +53,19 @@ public class Birdcontroller : MonoBehaviour
             time++;
             return;
         }
-        if (transform.position.y >= 85.0f || transform.position.y <= 0) {
+        if (transform.position.y >= 95.0f || transform.position.y <= 0) {
             alive = false;
             gameover.enabled = true;
             //  back.interactable = true;
             back.gameObject.SetActive(true);
+            restart.gameObject.SetActive(true);
             return;
         }
         if (alive)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                flySound.PlayOneShot(impact);
                 playerVelocity.y += flySpeed;
             }
             playerVelocity.y += Physics.gravity.y * Time.deltaTime;//v=v0+gt
@@ -79,10 +88,12 @@ public class Birdcontroller : MonoBehaviour
             alive = false;
             gameover.enabled = true;
             back.gameObject.SetActive(true);
+            restart.gameObject.SetActive(true);
         }
     }
 
     public void noOneCanBeat() {
+        eatSound.PlayOneShot(eatImpact);
         msRender.material = glowMaterial;
         invincible = true;
         InvokeRepeating("timer", 1, 1);
