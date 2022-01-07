@@ -53,6 +53,8 @@
     <UnityVersion>2020.3.23f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\script\howToPlay.cs" />
+    <Compile Include="Assets\script\storyToMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\SkythianCat\Glowing_Forest\Scripts\WaterGroup.cs" />
     <Compile Include="Assets\script\chickenLeg.cs" />
     <Compile Include="Assets\script\sceneswitch.cs" />
@@ -62,12 +64,11 @@
     <Compile Include="Assets\script\tubespawner.cs" />
     <Compile Include="Assets\script\exit.cs" />
     <Compile Include="Assets\script\addpoint.cs" />
+    <Compile Include="Assets\script\restart.cs" />
     <Compile Include="Assets\script\add_tube.cs" />
     <Compile Include="Assets\script\Birdcontroller.cs" />
-    <Compile Include="Assets\script\restart.cs" />
-    <Compile Include="Assets\script\howToPlay.cs" />
     <Compile Include="Assets\script\switchToHowToPlay.cs" />
-    <Compile Include="Assets\script\storyToMenu.cs" />
+    <Compile Include="Assets\script\tubeBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
