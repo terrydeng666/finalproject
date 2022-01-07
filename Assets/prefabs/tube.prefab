@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 1186292648060883032}
   - component: {fileID: -4054605386197470484}
   - component: {fileID: -71263217102984622}
+  - component: {fileID: 6968553775519309725}
   m_Layer: 0
   m_Name: tube
   m_TagString: Untagged
@@ -288,6 +289,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chickenLeg: {fileID: 2921134319588251144, guid: 16acbe5bed5d99944a567da1b7fcb438, type: 3}
+--- !u!114 &6968553775519309725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186292648060883033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f04e67102ee1c4888e6aa4806846e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7951214575416515286
 GameObject:
   m_ObjectHideFlags: 0
