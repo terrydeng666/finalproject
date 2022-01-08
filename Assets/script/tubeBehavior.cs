@@ -10,7 +10,7 @@ public class tubeBehavior : MonoBehaviour{
     private System.Random rnd = new System.Random(Guid.NewGuid().GetHashCode());
 
     void Start() {
-        if (rnd.Next() % 3 == 0) {
+        if (rnd.Next() % 2 == 0) {
             isRandom = true;
         }
         else {
