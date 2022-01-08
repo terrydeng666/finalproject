@@ -21,7 +21,7 @@ public class tubeandbosscontroller : MonoBehaviour
             startTime = Time.time;
 
             //spawnPos = previousPosition + distanceBetweenTubes * new Vector3(0, 0, 1);
-            Instantiate(bullet, new Vector3(transform.position.x, 20.0f, transform.position.z), Quaternion.Euler(0, 0, 0));
+            Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.Euler(0, 0, 0));
             //previousPosition = spawnPos;
             //num++;
         }

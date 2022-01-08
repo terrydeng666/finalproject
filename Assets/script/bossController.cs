@@ -17,6 +17,7 @@ public class bossController : MonoBehaviour
         tubespawner = GameObject.FindObjectOfType<tubespawner>();
         //boss = GetComponent<RawImage>();
         //boss.enabled = false;
+        meetBoss = false;
     }
 
     // Update is called once per frame

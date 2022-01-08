@@ -15,7 +15,7 @@ public class tube : MonoBehaviour
     {
         boss = GameObject.FindObjectOfType<bossController>();
         if (!boss.meetBoss)
-            transform.localPosition += r.Next(-10, 30) * Vector3.up;
+            transform.localPosition += r.Next(-20, 20) * Vector3.up;
         spawnCoins();
     }
 
@@ -52,7 +52,7 @@ public class tube : MonoBehaviour
             point = getRndPoint(collider);
         }
 
-        point.y += 20;
+        //point.y += 20;
         point.z -= 10;
         return point;
     }

@@ -13,7 +13,7 @@ public class TrailCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (time > 360)
+        if (time > 120)
         {
             
              Vector3 followPos = target.position - target.forward * trailDistance;

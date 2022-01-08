@@ -47,12 +47,12 @@ public class Birdcontroller : MonoBehaviour
         if (boss.meetBoss && flag)
         {
             controller.Move(transform.forward * 100);
-            transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+            transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
             flag = false;
         }
-        if (time < 200)
+        if (time < 120)
         {
-            if (time % 90 == 0)
+            if (time % 50 == 0)
             {
                 playerVelocity.y += flySpeed;
             }
@@ -62,7 +62,7 @@ public class Birdcontroller : MonoBehaviour
             time++;
             return;
         }
-        if (transform.position.y >= 100.0f || transform.position.y <= -50.0f)
+        if (transform.position.y >= 110.0f || transform.position.y <= -110.0f)
         {
             alive = false;
             gameover.enabled = true;

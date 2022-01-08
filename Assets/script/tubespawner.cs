@@ -16,7 +16,7 @@ public class tubespawner : MonoBehaviour
     Vector3 spawnPos;
     public float distanceBetweenTubes = 30.0f;
     int num = 0;
-    public int encounterboss = 2;
+    public int encounterboss;
     bossController boss;
     // Start is called before the first frame update
     void Start()

@@ -8,13 +8,21 @@ public class bulletcontroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (Random.value >= 0.67f)
+        if (Random.value >= 0.8f)
         {
             direction = new Vector3(0, 1, -1);
         }
-        else if (0.67f > Random.value && Random.value > 0.33f)
+        else if (0.8f > Random.value && Random.value > 0.6f)
+        {
+            direction = new Vector3(0, 0.5f, -1);
+        }
+        else if (0.6f > Random.value && Random.value > 0.4f)
         {
             direction = new Vector3(0, 0, -1);
+        }
+        else if (0.4f > Random.value && Random.value > 0.2f)
+        {
+            direction = new Vector3(0, -0.5f, -1);
         }
         else
         {
