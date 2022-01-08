@@ -20,6 +20,8 @@
 
 ### Tube Random Move
         障礙物會有機率的隨機上下移動，增加遊戲樂趣。
+### Small map
+	小地圖能幫助你看清楚前面的路
 
 ## How to play
         按下start進入遊戲畫面，即開始遊戲。
