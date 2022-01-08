@@ -704,7 +704,7 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 9d056697de1de2a850e7e49733c342e8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: bulletcontroller
