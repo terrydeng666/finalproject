@@ -24,7 +24,9 @@ public class Birdcontroller : MonoBehaviour
     //public TextMeshProUGUI back;
     public Button back;
     public Button restart;
-    int time=0;
+    int time = 0;
+    bossController boss;
+    bool flag = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,14 +38,21 @@ public class Birdcontroller : MonoBehaviour
         GameObject cube = controller.transform.GetChild(0).gameObject;
         msRender = cube.GetComponent<MeshRenderer>();
         flySound = GetComponent<AudioSource>();
+        boss = GameObject.FindObjectOfType<bossController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(time < 200)
+        if (boss.meetBoss && flag)
         {
-            if(time % 90 == 0)
+            controller.Move(transform.forward * 100);
+            transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+            flag = false;
+        }
+        if (time < 200)
+        {
+            if (time % 90 == 0)
             {
                 playerVelocity.y += flySpeed;
             }
@@ -53,7 +62,8 @@ public class Birdcontroller : MonoBehaviour
             time++;
             return;
         }
-        if (transform.position.y >= 95.0f || transform.position.y <= 0) {
+        if (transform.position.y >= 100.0f || transform.position.y <= -50.0f)
+        {
             alive = false;
             gameover.enabled = true;
             //  back.interactable = true;
@@ -70,7 +80,8 @@ public class Birdcontroller : MonoBehaviour
             }
             playerVelocity.y += Physics.gravity.y * Time.deltaTime;//v=v0+gt
             controller.Move(playerVelocity * Time.deltaTime);//s=v*t
-            controller.Move(transform.forward * speed * Time.deltaTime);
+            if (!boss.meetBoss)
+                controller.Move(transform.forward * speed * Time.deltaTime);
         }
         else
         {
@@ -79,11 +90,12 @@ public class Birdcontroller : MonoBehaviour
     }
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (invincible) {
+        if (invincible)
+        {
             return;
         }
         // Debug.Log(hit.gameObject.name);
-        if (hit.gameObject.tag == "tube")
+        if (hit.gameObject.tag == "tube" || hit.gameObject.tag == "bullet")
         {
             alive = false;
             gameover.enabled = true;
@@ -92,18 +104,21 @@ public class Birdcontroller : MonoBehaviour
         }
     }
 
-    public void noOneCanBeat() {
+    public void noOneCanBeat()
+    {
         eatSound.PlayOneShot(eatImpact);
         msRender.material = glowMaterial;
         invincible = true;
         InvokeRepeating("timer", 1, 1);
     }
 
-    private void timer() {
+    private void timer()
+    {
         Debug.Log("countdown");
         alive = true;
         aliveTime--;
-        if (aliveTime == 0) {
+        if (aliveTime == 0)
+        {
             CancelInvoke("timer");
             msRender.material = normalMaterial;
             invincible = false;
