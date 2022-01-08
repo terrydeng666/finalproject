@@ -7,9 +7,14 @@ public class tubeandbosscontroller : MonoBehaviour
     public GameObject bullet;
     private float startTime;
     public float timeOffset = 5.0f;
+    bool flag;//up:true
+    public float tubeMoveSpeed = 0.08f;
+    public float tubeMoveRange = 10.0f;
+    private float i = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
+        flag = true;
         transform.position = new Vector3(transform.position.x, 0, transform.position.z);
     }
 
@@ -25,5 +30,22 @@ public class tubeandbosscontroller : MonoBehaviour
             //previousPosition = spawnPos;
             //num++;
         }
+        if (flag && i >= tubeMoveRange)
+        {
+            flag = false;
+        }
+        if (!flag && i <= -1 * tubeMoveRange)
+        {
+            flag = true;
+        }
+        if (flag)
+        {
+            i += tubeMoveSpeed;
+        }
+        if (!flag)
+        {
+            i -= tubeMoveSpeed;
+        }
+        transform.position = new Vector3(transform.position.x, 0, transform.position.z) + i * Vector3.up;
     }
 }

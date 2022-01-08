@@ -1672,7 +1672,7 @@ MonoBehaviour:
   tubeandboss: {fileID: 7650692504176656299, guid: db53af76f95df974e80de80694b9981a, type: 3}
   timeOffset: 0.5
   distanceBetweenTubes: 30
-  encounterboss: 2
+  encounterboss: 99
 --- !u!4 &1066168606
 Transform:
   m_ObjectHideFlags: 0
