@@ -11,6 +11,8 @@ public class Birdcontroller : MonoBehaviour
     public AudioClip impact;
     public AudioSource eatSound;
     public AudioClip eatImpact;
+    public AudioSource dieSound;
+    public AudioClip dieImpact;
     public Material glowMaterial;
     public Material normalMaterial;
     public bool alive = true;
@@ -65,6 +67,7 @@ public class Birdcontroller : MonoBehaviour
         }
         if (transform.position.y >= 80.0f || transform.position.y <= -80.0f)
         {
+            dieSound.PlayOneShot(dieImpact);
             alive = false;
             gameover.enabled = true;
             //  back.interactable = true;
@@ -98,10 +101,12 @@ public class Birdcontroller : MonoBehaviour
         // Debug.Log(hit.gameObject.name);
         if (hit.gameObject.tag == "tube" || hit.gameObject.tag == "bullet")
         {
+            dieSound.PlayOneShot(dieImpact);
             alive = false;
             gameover.enabled = true;
             back.gameObject.SetActive(true);
             restart.gameObject.SetActive(true);
+            dieSound.PlayOneShot(dieImpact);
         }
     }
 

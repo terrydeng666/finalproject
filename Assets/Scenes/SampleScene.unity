@@ -434,6 +434,8 @@ MonoBehaviour:
   impact: {fileID: 8300000, guid: a1e812ea70a46c6458e60290f133be1b, type: 3}
   eatSound: {fileID: 422726616}
   eatImpact: {fileID: 8300000, guid: da843d3b9feec424abbd72e70b453633, type: 3}
+  dieSound: {fileID: 422726616}
+  dieImpact: {fileID: 8300000, guid: a190bbae73bc8674193b10e75107ee75, type: 3}
   glowMaterial: {fileID: 2100000, guid: 20fb423fe92736a4c806ed77d2ab0507, type: 2}
   normalMaterial: {fileID: 2100000, guid: eff44d4dec35ee441b3d8800e4fdc418, type: 2}
   alive: 1
@@ -495,7 +497,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.192
+  m_Volume: 0.167
   m_Pitch: 1
   Loop: 0
   Mute: 0
