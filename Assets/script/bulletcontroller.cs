@@ -5,9 +5,12 @@ using UnityEngine;
 public class bulletcontroller : MonoBehaviour
 {
     Vector3 direction;
+    public AudioSource bulletSound;
+    public AudioClip impact;
     // Start is called before the first frame update
     void Start()
     {
+        bulletSound.PlayOneShot(impact);
         if (Random.value >= 0.8f)
         {
             direction = new Vector3(0, 1, -1);

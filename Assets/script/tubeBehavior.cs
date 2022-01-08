@@ -39,7 +39,7 @@ public class tubeBehavior : MonoBehaviour
         {
             flag = false;
         }
-        if(!flag && i <= -1*tubeMoveRange)
+        if(!flag && i <= -1 * tubeMoveRange)
         {
             flag = true;
         }

@@ -1,0 +1,196 @@
+[33mcommit 8332ee5f9147395dd20c9a3be0eee1b1d055b58d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Sat Jan 8 21:28:09 2022 +0800
+
+    none
+
+[33mcommit c10afa373e5ef8efc035cbdc713c996029eade23[m[33m ([m[1;31mupstream/main[m[33m)[m
+Merge: e70af315 6b4bf3b1
+Author: yeh-sudo <75301735+yeh-sudo@users.noreply.github.com>
+Date:   Sat Jan 8 21:18:47 2022 +0800
+
+    Merge pull request #4 from yeh-sudo/main
+    
+    merge
+
+[33mcommit 6b4bf3b1e36225f05af9973b7bacc3b0b0f77cf7[m
+Merge: 87de2620 e70af315
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Sat Jan 8 21:13:50 2022 +0800
+
+    Merge branch 'main' of https://github.com/yeh-sudo/finalproject
+
+[33mcommit e70af3158e43b4e84c6542c8c97d409083437b0c[m
+Author: yuunnn420 <83856582+yuunnn420@users.noreply.github.com>
+Date:   Sat Jan 8 21:07:48 2022 +0800
+
+    20220108_4
+    
+    boss會動
+
+[33mcommit 87de26205a7741ba4a5b069b49fc3b487c9138b0[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Sat Jan 8 21:06:21 2022 +0800
+
+    none
+
+[33mcommit 8e61176a6ca29b7f218dd8eecf7ebcedc48fe1c5[m
+Author: yuunnn420 <83856582+yuunnn420@users.noreply.github.com>
+Date:   Sat Jan 8 21:01:43 2022 +0800
+
+    20220108_3
+    
+    調整參數,會動的水管,子彈
+
+[33mcommit 5e75d93e457690ad6d4ccbe148a966eb3761c464[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Sat Jan 8 20:43:02 2022 +0800
+
+    fixed wrong word
+
+[33mcommit 8fcf703dd1fd7c5c1ba60eb19952bb49136ab9f5[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Sat Jan 8 20:41:09 2022 +0800
+
+    change the probability of moving tube
+
+[33mcommit 0ec0a62e88826b09a2b41977630e75fba8394f83[m
+Author: yuunnn420 <83856582+yuunnn420@users.noreply.github.com>
+Date:   Sat Jan 8 20:08:06 2022 +0800
+
+    20220108
+
+[33mcommit 5440b8319883db7273f2deb25662a46374294e78[m
+Author: yuunnn420 <83856582+yuunnn420@users.noreply.github.com>
+Date:   Sat Jan 8 15:27:10 2022 +0800
+
+    20220108_BOSS
+
+[33mcommit 8e9ae794990150ce64c901734bc18886b4397d6d[m
+Merge: f1e06818 fe6744c3
+Author: yeh-sudo <75301735+yeh-sudo@users.noreply.github.com>
+Date:   Fri Jan 7 23:13:45 2022 +0800
+
+    Merge pull request #3 from yeh-sudo/main
+    
+    add random moving tube
+
+[33mcommit fe6744c30ec4170cd52fc2c85a090e3a38e502b7[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Fri Jan 7 23:11:57 2022 +0800
+
+    add random moving tube
+
+[33mcommit f1e06818133a65295a478b0088af5c18fa5bd98d[m
+Merge: 5ab8f511 24e816c6
+Author: donpeyem <77134209+terrydeng666@users.noreply.github.com>
+Date:   Thu Jan 6 09:29:28 2022 +0800
+
+    Merge pull request #2 from yeh-sudo/main
+    
+    Update
+
+[33mcommit 24e816c607e1f6e2b132c5b3c470ea1bed5b457d[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Thu Jan 6 00:18:02 2022 +0800
+
+    change title
+
+[33mcommit 6d429e254d32086fb81f91332003226fbc6c32ce[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Thu Jan 6 00:13:30 2022 +0800
+
+    add story
+
+[33mcommit 826f5714ca624b0675ec6be7e203c7522e06c743[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Wed Jan 5 22:59:40 2022 +0800
+
+    add boss scene, how to play scene
+
+[33mcommit 8c7413e29ba15f36e6f1573fb0e96af7c1906622[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Wed Jan 5 21:43:36 2022 +0800
+
+    fixed score and add animation to chicken leg
+
+[33mcommit 154a75354160a16036d7fdb432e0a1280a2a07bc[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Wed Jan 5 21:08:19 2022 +0800
+
+    fixed light problems
+
+[33mcommit 5ab8f511831a2cd525769584259aee706f8aa3a3[m
+Author: donpeyem <77134209+terrydeng666@users.noreply.github.com>
+Date:   Wed Jan 5 14:29:04 2022 +0800
+
+    1/5
+
+[33mcommit dbfabdbbb23b2aecd1b86b7713d143bcd43ca72f[m
+Merge: 17df6764 ad1dd17b
+Author: donpeyem <77134209+terrydeng666@users.noreply.github.com>
+Date:   Wed Jan 5 09:42:35 2022 +0800
+
+    Merge pull request #1 from yeh-sudo/main
+    
+    Hello
+
+[33mcommit ad1dd17b1d89c18ae7138fd0b63958b9037e5f17[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Wed Jan 5 01:43:17 2022 +0800
+
+    nothing
+
+[33mcommit b9211726ab29163a40733ec8eb700700ba05317e[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Wed Jan 5 00:56:34 2022 +0800
+
+    Update sound
+
+[33mcommit cb8bec624d9c2e65e9c1a7d2a6dede415dff73f0[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Wed Jan 5 00:43:04 2022 +0800
+
+    Add background music
+
+[33mcommit 28c42cf16bbdd314f05df74da499a16e21ae82e1[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Wed Jan 5 00:29:19 2022 +0800
+
+    change glow effect
+
+[33mcommit 37a9882d52aea10a66c1b0b9dac2a885c438f112[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Wed Jan 5 00:24:38 2022 +0800
+
+    Adding glow effect, invincible chicken leg
+
+[33mcommit 5d6f3013440e3bc1b6a7ec21cc5d4a0650dfc065[m
+Author: yeh-sudo <yehchanshen@gmail.com>
+Date:   Tue Jan 4 20:26:55 2022 +0800
+
+    none
+
+[33mcommit 17df67644fd0196c1e720fc9b45697d830f63c3c[m
+Author: yuunnn420 <83856582+yuunnn420@users.noreply.github.com>
+Date:   Tue Dec 28 16:16:40 2021 +0800
+
+    Create README.md
+
+[33mcommit bb74f016c95f37fb741367d8ec4ddb26b94f094a[m
+Author: yuunnn420 <83856582+yuunnn420@users.noreply.github.com>
+Date:   Tue Dec 28 16:04:08 2021 +0800
+
+    20211228_2
+
+[33mcommit 4099ecdca60ab67d442753adaa6a8e80329dd9bb[m
+Author: yuunnn420 <83856582+yuunnn420@users.noreply.github.com>
+Date:   Tue Dec 28 07:07:18 2021 +0800
+
+    20211228
+
+[33mcommit b6f99a8e92fbf6a8676cc2bbf3fb9495b6027f26[m
+Author: donpeyem <77134209+terrydeng666@users.noreply.github.com>
+Date:   Mon Dec 27 11:30:04 2021 +0800
+
+    Initial commit

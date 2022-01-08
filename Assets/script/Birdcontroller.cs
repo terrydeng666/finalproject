@@ -46,6 +46,7 @@ public class Birdcontroller : MonoBehaviour
     {
         if (boss.meetBoss && flag)
         {
+            noOneCanBeat();
             controller.Move(transform.forward * 100);
             transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
             flag = false;
@@ -62,7 +63,7 @@ public class Birdcontroller : MonoBehaviour
             time++;
             return;
         }
-        if (transform.position.y >= 110.0f || transform.position.y <= -110.0f)
+        if (transform.position.y >= 80.0f || transform.position.y <= -80.0f)
         {
             alive = false;
             gameover.enabled = true;
