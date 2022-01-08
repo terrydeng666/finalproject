@@ -9,10 +9,12 @@ public class bossController : MonoBehaviour
     addpoint addpoint;
     public RawImage boss;
     public bool meetBoss = false;
+    tubespawner tubespawner;
     // Start is called before the first frame update
     void Start()
     {
         addpoint = GameObject.FindObjectOfType<addpoint>();
+        tubespawner = GameObject.FindObjectOfType<tubespawner>();
         //boss = GetComponent<RawImage>();
         //boss.enabled = false;
     }
@@ -20,7 +22,7 @@ public class bossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (addpoint.point >= 2)
+        if (addpoint.point >= tubespawner.encounterboss)
         {
             //boss.enabled = true;
             meetBoss = true;
